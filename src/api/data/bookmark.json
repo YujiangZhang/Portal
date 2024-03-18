@@ -1,0 +1,651 @@
+[
+  {
+    "name": "common",
+    "type": "unfold",
+    "bookmarks": [
+      {
+        "name": "ChatGpt",
+        "url": "https://chat.openai.com/"
+      },
+      {
+        "name": "Claude",
+        "url": "https://claude.ai/chats"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/"
+      },
+      {
+        "name": "Bilibili",
+        "url": "https://www.bilibili.com/"
+      },
+      {
+        "name": "MDN",
+        "url": "https://developer.mozilla.org/zh-CN/"
+      },
+      {
+        "name": "midjourney",
+        "url": "https://www.midjourney.com/home"
+      }
+    ]
+  },
+  {
+    "name": "Vue",
+    "bookmarks": [
+      {
+        "name": "Vue",
+        "url": "https://cn.vuejs.org/guide/introduction.html"
+      },
+      {
+        "name": "Vue Router",
+        "url": "https://router.vuejs.org/zh/"
+      },
+      {
+        "name": "Pinia",
+        "url": "https://pinia.vuejs.org/zh/"
+      }
+    ],
+    "children": [
+      {
+        "name": "UI",
+        "bookmarks": [
+          {
+            "name": "UI-Ant",
+            "url": "https://www.antdv.com/components/overview-cn"
+          },
+          {
+            "name": "Element",
+            "url": "https://element-plus.gitee.io/#/zh-CN/component/installation"
+          },
+          {
+            "name": "Vant",
+            "url": "https://vant-contrib.gitee.io/vant/#/zh-CN/home"
+          },
+          {
+            "name": "Vuetify",
+            "url": "https://vuetifyjs.com/zh-Hans/getting-started/quick-start"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "React",
+    "bookmarks": [
+      {
+        "name": "React",
+        "url": "https://react.docschina.org/learn"
+      }
+    ],
+    "children": [
+      {
+        "name": "全栈框架",
+        "bookmarks": [
+          {
+            "name": "Next",
+            "url": "https://nextjs.org/docs"
+          },
+          {
+            "name": "Remix",
+            "url": "https://remix.run/docs/en/main/tutorials/jokes"
+          }
+        ]
+      },
+      {
+        "name": "移动端框架",
+        "bookmarks": [
+          {
+            "name": "React Native",
+            "url": "https://reactnative.dev/docs/getting-started"
+          },
+          {
+            "name": "React Native zh",
+            "url": "https://reactnative.cn/docs/getting-started"
+          }
+        ]
+      },
+      {
+        "name": "UI",
+        "bookmarks": [
+          {
+            "name": "UI-Ant",
+            "url": "https://ant.design/docs/react/introduce-cn"
+          }
+        ]
+      },
+      {
+        "name": "组件",
+        "bookmarks": [
+          {
+            "name": "react-infinite-scroll-component",
+            "url": "https://github.com/ankeetmaini/react-infinite-scroll-component?tab=readme-ov-file"
+          },
+          {
+            "name": "virtual-list",
+            "url": "https://github.com/react-component/virtual-list"
+          },
+          {
+            "name": "react-transition-group",
+            "url": "https://reactcommunity.org/react-transition-group/"
+          }
+        ]
+      },
+      {
+        "name": "动画",
+        "children": [
+          {
+            "name": "Framer Motion",
+            "url": "https://www.framer.com/motion/introduction/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Css",
+    "bookmarks": [
+      {
+        "name": "Css",
+        "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS"
+      },
+      {
+        "name": "Sass",
+        "url": "https://www.sass.hk/docs/"
+      },
+      {
+        "name": "Less",
+        "url": "http://lesscss.cn/"
+      },
+      {
+        "name": "Stylus",
+        "url": "https://stylus-lang.com/docs/"
+      }
+    ],
+    "children": [
+      {
+        "name": "布局",
+        "bookmarks": [
+          {
+            "name": "Flex",
+            "url": "https://www.runoob.com/w3cnote/flex-grammar.html"
+          },
+          {
+            "name": "Grid",
+            "url": "https://www.runoob.com/css/css3-grid-layout.html"
+          }
+        ]
+      },
+      {
+        "name": "预处理器",
+        "bookmarks": [
+          {
+            "name": "PostCSS",
+            "url": "https://postcss.org/"
+          },
+          {
+            "name": "Tailwind",
+            "url": "https://www.tailwindcss.cn/docs/installation"
+          }
+        ]
+      },
+      {
+        "name": "动画",
+        "bookmarks": [
+          {
+            "name": "Animate.css",
+            "url": "https://animate.style/"
+          },
+          {
+            "name": "Hover.css",
+            "url": "https://ianlunn.github.io/Hover/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "JavaScript",
+    "bookmarks": [
+      {
+        "name": "MDN",
+        "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.tslang.cn/docs/handbook/basic-types.html"
+      },
+      {
+        "name": "Node",
+        "url": "https://nodejs.org/zh-cn/docs/"
+      },
+      {
+        "name": "Babel",
+        "url": "https://www.babeljs.cn/docs/"
+      }
+    ],
+    "children": [
+      {
+        "name": "管理",
+        "bookmarks": [
+          {
+            "name": "npm",
+            "url": "https://docs.npmjs.com/"
+          },
+          {
+            "name": "yarn",
+            "url": "https://yarn.bootcss.com/"
+          },
+          {
+            "name": "NVM",
+            "url": "https://github.com/nvm-sh/nvm"
+          },
+          {
+            "name": "yrm",
+            "url": "https://github.com/i5ting/yrm"
+          }
+        ]
+      },
+      {
+        "name": "构建工具",
+        "bookmarks": [
+          {
+            "name": "Webpack",
+            "url": "https://webpack.docschina.org/concepts/"
+          },
+          {
+            "name": "Vite",
+            "url": "https://cn.vitejs.dev/"
+          },
+          {
+            "name": "Rollup",
+            "url": "https://www.rollupjs.com/guide/zh"
+          },
+          {
+            "name": "Parcel",
+            "url": "https://parceljs.org/"
+          }
+        ]
+      },
+      {
+        "name": "node 框架",
+        "bookmarks": [
+          {
+            "name": "Express",
+            "url": "https://expressjs.com/zh-cn/"
+          },
+          {
+            "name": "Koa",
+            "url": "https://koajs.com/"
+          }
+        ]
+      },
+      {
+        "name": "库与模块",
+        "bookmarks": [
+          {
+            "name": "Lodash",
+            "url": "https://www.lodashjs.com/"
+          },
+          {
+            "name": "Axios",
+            "url": "https://axios-http.com/docs/intro"
+          },
+          {
+            "name": "Moment",
+            "url": "http://momentjs.cn/"
+          },
+          {
+            "name": "Dayjs",
+            "url": "https://dayjs.gitee.io/zh-CN/"
+          },
+          {
+            "name": "Three.js",
+            "url": "https://threejs.org/docs/index.html#manual/zh/introduction/Creating-a-scene"
+          },
+          {
+            "name": "Echarts",
+            "url": "https://echarts.apache.org/zh/index.html"
+          },
+          {
+            "name": "Marked",
+            "url": "https://marked.js.org/"
+          },
+          {
+            "name": "http-server",
+            "url": "https://www.npmjs.com/package/http-server"
+          },
+          {
+            "name": "better-sqlite3",
+            "url": "https://github.com/WiseLibs/better-sqlite3"
+          },
+          {
+            "name": "sqlite3",
+            "url": "https://github.com/tryghost/node-sqlite3"
+          },
+          {
+            "name": "lowdb",
+            "url": "https://github.com/typicode/lowdb#readme"
+          },
+          {
+            "name": "next-connect",
+            "url": "https://www.npmjs.com/package/next-connect"
+          },
+          {
+            "name": "multer",
+            "url": "https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md"
+          },
+          {
+            "name": "formidable",
+            "url": "https://www.npmjs.com/package/formidable"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Python",
+    "bookmarks": [
+      {
+        "name": "Python",
+        "url": "https://docs.python.org/docs/"
+      }
+    ],
+    "children": [
+      {
+        "name": "后端",
+        "bookmarks": [
+          {
+            "name": "Flask",
+            "url": "https://flask.palletsprojects.com/en/3.0.x/"
+          },
+          {
+            "name": "Flask-zh",
+            "url": "https://dormousehole.readthedocs.io/en/latest/"
+          },
+          {
+            "name": "Django",
+            "url": "https://docs.djangoproject.com/zh-hans/3.2/"
+          },
+          {
+            "name": "FastAPI",
+            "url": "https://fastapi.tiangolo.com/zh/"
+          },
+          {
+            "name": "PyMongo",
+            "url": "https://pymongo.readthedocs.io/en/stable/"
+          }
+        ]
+      },
+      {
+        "name": "爬虫",
+        "bookmarks": [
+          {
+            "name": "Requests",
+            "url": "https://docs.python-requests.org/zh_CN/latest/"
+          },
+          {
+            "name": "BeautifulSoup",
+            "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/"
+          },
+          {
+            "name": "Scrapy",
+            "url": "https://docs.scrapy.org/en/latest/"
+          }
+        ]
+      },
+      {
+        "name": "数据分析",
+        "bookmarks": [
+          {
+            "name": "Pandas",
+            "url": "https://pandas.pydata.org/docs/"
+          },
+          {
+            "name": "Numpy",
+            "url": "https://numpy.org/doc/stable/"
+          },
+          {
+            "name": "Matplotlib",
+            "url": "https://matplotlib.org/stable/contents.html"
+          },
+          {
+            "name": "Seaborn",
+            "url": "https://seaborn.pydata.org/"
+          }
+        ]
+      },
+      {
+        "name": "机器学习",
+        "bookmarks": [
+          {
+            "name": "Scikit-learn",
+            "url": "https://scikit-learn.org/stable/user_guide.html"
+          },
+          {
+            "name": "TensorFlow",
+            "url": "https://tensorflow.google.cn/"
+          },
+          {
+            "name": "Keras",
+            "url": "https://keras.io/getting_started/"
+          },
+          {
+            "name": "XGBoost",
+            "url": "https://xgboost.readthedocs.io/en/latest/"
+          },
+          {
+            "name": "LightGBM",
+            "url": "https://lightgbm.readthedocs.io/en/latest/"
+          },
+          {
+            "name": "CatBoost",
+            "url": "https://catboost.ai/docs/"
+          }
+        ]
+      },
+      {
+        "name": "深度学习",
+        "bookmarks": [
+          {
+            "name": "PyTorch",
+            "url": "https://pytorch.org/docs/stable/index.html"
+          }
+        ]
+      },
+      {
+        "name": "自然语言处理",
+        "bookmarks": [
+          {
+            "name": "NLTK",
+            "url": "https://www.nltk.org/"
+          },
+          {
+            "name": "spaCy",
+            "url": "https://spacy.io/usage"
+          }
+        ]
+      },
+      {
+        "name": "图像处理",
+        "bookmarks": [
+          {
+            "name": "OpenCV",
+            "url": "https://docs.opencv.org/master/"
+          },
+          {
+            "name": "Pillow",
+            "url": "https://pillow.readthedocs.io/en/stable/"
+          }
+        ]
+      },
+      {
+        "name": "音频处理",
+        "bookmarks": [
+          {
+            "name": "Librosa",
+            "url": "https://librosa.org/doc/main/index.html"
+          },
+          {
+            "name": "PyDub",
+            "url": "https://pydub.com/"
+          },
+          {
+            "name": "pyAudioAnalysis",
+            "url": "https://pyaudioanalysis.readthedocs.io/en/latest/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Java",
+    "bookmarks": [
+      {
+        "name": "Java",
+        "url": "https://docs.oracle.com/en/java/"
+      },
+      {
+        "name": "Spring",
+        "url": "https://spring.io/guides"
+      },
+      {
+        "name": "Spring Boot",
+        "url": "https://spring.io/guides/gs/spring-boot/"
+      },
+      {
+        "name": "MyBatis",
+        "url": "https://mybatis.org/mybatis-3/zh/index.html"
+      },
+      {
+        "name": "Hibernate",
+        "url": "https://docs.jboss.org/hibernate/orm/5.5/userguide/html_single/Hibernate_User_Guide.html"
+      },
+      {
+        "name": "Maven",
+        "url": "https://maven.apache.org/guides/index.html"
+      },
+      {
+        "name": "Gradle",
+        "url": "https://docs.gradle.org/current/userguide/userguide.html"
+      }
+    ]
+  },
+  {
+    "name": "Windows",
+    "bookmarks": [
+      {
+        "name": "Git",
+        "url": "https://git-scm.com/"
+      },
+      {
+        "name": "7-zip",
+        "url": "https://www.7-zip.org/"
+      },
+      {
+        "name": "vscode",
+        "url": "https://code.visualstudio.com/docs"
+      },
+      {
+        "name": "Typora",
+        "url": "https://support.typora.io/"
+      },
+      {
+        "name": "Postman",
+        "url": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "name": "Snipaste",
+        "url": "https://www.snipaste.com/"
+      },
+      {
+        "name": "Figma",
+        "url": "https://www.figma.com/files/recent"
+      },
+      {
+        "name": "PowerToys",
+        "url": "https://docs.microsoft.com/zh-cn/windows/powertoys/"
+      },
+      {
+        "name": "Shadowsocks",
+        "url": "https://github.com/shadowsocks/shadowsocks-windows"
+      },
+      {
+        "name": "vim",
+        "url": "https://www.vim.org/docs.php"
+      },
+      {
+        "name": "Sqlite",
+        "url": "https://www.sqlite.org/docs.html"
+      }
+    ]
+  },
+  {
+    "name": "Linux",
+    "bookmarks": [
+      {
+        "name": "Linux",
+        "url": "https://www.linux.org/"
+      },
+      {
+        "name": "Ubuntu",
+        "url": "https://ubuntu.com/tutorials"
+      },
+      {
+        "name": "CentOS",
+        "url": "https://www.centos.org/docs/"
+      },
+      {
+        "name": "Docker",
+        "url": "https://docs.docker.com/"
+      },
+      {
+        "name": "Nginx",
+        "url": "https://nginx.org/en/docs/"
+      },
+      {
+        "name": "Apache",
+        "url": "https://httpd.apache.org/docs/"
+      },
+      {
+        "name": "Redis",
+        "url": "https://redis.io/documentation"
+      },
+      {
+        "name": "MySQL",
+        "url": "https://dev.mysql.com/doc/"
+      },
+      {
+        "name": "MongoDB",
+        "url": "https://docs.mongodb.com/"
+      },
+      {
+        "name": "GitLab",
+        "url": "https://docs.gitlab.com/"
+      }
+    ],
+    "children": [
+      {
+        "name": "Shell",
+        "bookmarks": [
+          {
+            "name": "Bash",
+            "url": "https://www.gnu.org/software/bash/manual/bash.html"
+          },
+          {
+            "name": "Zsh",
+            "url": "https://www.zsh.org/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "桌面",
+    "bookmarks": [
+      {
+        "name": "Electron",
+        "url": "https://www.electronjs.org/zh/docs/latest/tutorial/quick-start"
+      }
+    ]
+  }
+]

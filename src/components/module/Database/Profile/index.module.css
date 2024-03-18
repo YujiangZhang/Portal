@@ -1,0 +1,34 @@
+.socials {
+  padding: 1em 2em;
+}
+
+.socialsItem {
+  position: relative;
+  padding: 0.5em 0;
+}
+
+.socialLabel {
+  position: absolute;
+  top: -0.5em;
+  left: 2px;
+  z-index: 1;
+  color: rgba(var(--text-color), 0.4);
+  transform: scale(0.8);
+
+  transition: color 0.3s;
+}
+
+.socialsItem:hover .socialLabel {
+  color: rgba(var(--text-color), 0.8);
+}
+
+.socialsDelete {
+  position: absolute;
+  top: 50%;
+  right: -0.25em;
+  transform: translateY(-50%);
+}
+
+.socialAdd {
+  margin-top: 0.8em;
+}

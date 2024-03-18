@@ -1,0 +1,12 @@
+.backgroundImageUrl {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  border-radius: .3rem;
+  gap: .5em;
+}
+
+

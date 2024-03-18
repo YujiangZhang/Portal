@@ -1,0 +1,29 @@
+.li {
+  margin-bottom: 0.5rem;
+}
+
+.main,
+.mainLoading {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.mainLoading {
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContent,
+.mainLoading {
+  flex: 1;
+  overflow: auto;
+}
+
+.mainAction {
+  padding: 1rem;
+  min-height: 0;
+  margin-top: auto;
+}
+

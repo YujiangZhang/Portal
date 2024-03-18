@@ -1,0 +1,61 @@
+.layout {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.aside,
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  overflow: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.aside {
+  gap: 0.5rem;
+  padding: 1rem;
+  left: 0;
+  border-right: 1px solid rgba(var(--text-color), 0.1);
+}
+
+.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.menuIcon {
+  display: block;
+  padding: 0.6rem;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+
+  background-color: rgba(var(--text-color), 0);
+  transition: background-color 0.5s ease;
+}
+
+.menuLabel {
+  font-size: 0.8rem;
+  color: rgba(var(--text-color), 0.6);
+  transition: color 0.3s ease;
+}
+
+.menu:hover .menuIcon,
+.menuIconActive {
+  background-color: tomato;
+}
+
+.menu:hover .menuLabel {
+  color: rgba(var(--text-color), 1);
+}
+
+.menuIconActive {
+  background-color: tomato;
+}

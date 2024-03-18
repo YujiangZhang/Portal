@@ -1,0 +1,44 @@
+[
+  {
+    "name": "search",
+    "label": "搜索",
+    "searchEngines": [
+      {
+        "name": "Bing",
+        "label": "必应",
+        "url": "https://cn.bing.com/search?q="
+      },
+      {
+        "name": "Google",
+        "label": "谷歌",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "name": "Baidu",
+        "label": "百度",
+        "url": "https://www.baidu.com/s?wd="
+      }
+    ]
+  },
+  {
+    "name": "picture",
+    "label": "图片",
+    "searchEngines": [
+      {
+        "name": "Unsplash",
+        "label": "Unsplash",
+        "url": "https://unsplash.com/s/photos/"
+      },
+      {
+        "name": "Pexels",
+        "label": "Pexels",
+        "url": "https://www.pexels.com/zh-cn/search/"
+      },
+      {
+        "name": "Pixabay",
+        "label": "Pixabay",
+        "url": "https://pixabay.com/zh/images/search/"
+      }
+    ]
+  }
+]

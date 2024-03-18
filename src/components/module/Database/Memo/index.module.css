@@ -1,0 +1,56 @@
+.memo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: 1em;
+  padding: 1em;
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  margin: 1em;
+  margin-top: 0;
+  padding: 1em;
+  flex: 1;
+}
+
+.item {
+  margin-bottom: 0.5em;
+  border: 1px solid rgba(var(--bg-color), 0);
+  gap: 0.5em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: rgba(var(--bg-color), 0.3);
+  border-color: rgba(var(--text-color), 0.5);
+}
+
+.itemBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.itemContent {
+  flex: 1;
+  /* padding-top: .5em; */
+  margin-top: 0.5em;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.itemBottomHandle {
+  display: flex;
+  align-items: flex-end;
+  justify-self: flex-end;
+}
