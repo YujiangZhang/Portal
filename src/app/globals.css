@@ -4,14 +4,16 @@
   --background-image: unset;
 
   background-size: cover;
+
   background-color: rgba(var(--bg-color), 1);
-  background: var(--background-image) no-repeat center center fixed;
+  background: rgba(var(--bg-color), 1) var(--background-image) no-repeat center
+    center fixed;
   background-size: cover;
 
   transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 }
 
-.dark {
+:root.dark {
   --text-color: 255, 255, 255;
   --bg-color: 25, 25, 25;
 }
