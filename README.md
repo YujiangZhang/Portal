@@ -20,7 +20,7 @@ yarn run dev
 
 ## build
 
-注意 config.ts 下的 api 为端口为 3000
+注意 config.ts 下的 api 端口为 3000
 
 ```sh
 yarn run build
