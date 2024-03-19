@@ -16,7 +16,6 @@ import { SettingsType } from "@/db/types";
 const getSettings = async (): Promise<SettingsType> => {
   const res = await request.get("/settings");
   if (res.data) {
-    console.log("res.data", res.data);
     return res.data;
   } else {
     return defaultSettings();
@@ -72,9 +71,9 @@ export default function MenuLayout({
   const handleSettings = useCallback((settings: SettingsType) => {
     const { background, text, color } = settings;
     const backgroundCss = {
-      // "--background-image": background.useBackgroundImage
-      //   ? `url(${background.backgroundImageUrl})`
-      //   : "unset",
+      "--background-image": background.useBackgroundImage
+        ? `url(${background.backgroundImageUrl})`
+        : "none",
       // "--bg-color": hexToRgb(background.backgroundColor, true) as string,
     };
     const textCss = {
@@ -88,12 +87,12 @@ export default function MenuLayout({
       // "--secondary-color": color.secondaryColor,
       // "--accent-color": color.accentColor,
     };
-    // const root = document.documentElement;
-    // Object.entries({ ...backgroundCss, ...textCss, ...colorCss }).forEach(
-    //   ([key, value]) => {
-    //     root.style.setProperty(key, value);
-    //   }
-    // );
+    const root = document.documentElement;
+    Object.entries({ ...backgroundCss, ...textCss, ...colorCss }).forEach(
+      ([key, value]) => {
+        root.style.setProperty(key, value);
+      }
+    );
   }, []);
 
   // init
@@ -110,7 +109,7 @@ export default function MenuLayout({
       // 主题定制
       const _settings = await getSettings();
       setSettings(_settings);
-      // handleSettings(_settings);
+      handleSettings(_settings);
     };
 
     init();

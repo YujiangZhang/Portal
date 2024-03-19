@@ -14,6 +14,7 @@ import {
 import { IncomingForm, File } from "formidable";
 import { createFolder } from "./lib/utils";
 import { defaultFile as DefaultFile } from "@/db/defaultData";
+import { resolve } from "path";
 
 type CustomFileType = Omit<FileType, "id" | "created_at" | "updated_at">;
 
@@ -127,26 +128,25 @@ export async function uploadFileApi(
 export async function ReadFileApi(
   req: NextApiRequest,
   res: NextApiResponse,
-  paths: string[] = [],
-  saveFolder = SAVEFOLDER,
-  readFolder = READFOLDER
+  paths: string[] = []
 ) {
-  const path = getReadFilePath(...paths);
+  try {
+    const path = getReadFilePath(...paths); // 请求路径
 
-  console.log(path);
+    const file = db.data.files.find((file) => file.path === path);
 
-  const file = db.data.files.find((file) => file.path === path);
+    if (!file) {
+      res.status(404).json({ error: "文件不存在" });
+    }
 
-  if (!file) {
-    res.status(404).json({ error: "文件不存在" });
-  }
+    const fileName = paths[paths.length - 1];
+    const fileFolder = `${getSaveFolder(...paths.slice(0, -1))}`;
+    const filePath = resolve(fileFolder, fileName); // 存储路径
+    console.log("read 文件路径", filePath);
 
-  const filePath = `${createFolder(saveFolder, paths)}`;
-
-  if (fs.existsSync(filePath)) {
     const fileStream = fs.createReadStream(filePath);
     fileStream.pipe(res);
-  } else {
-    res.status(404).json({ error: "文件不存在" });
+  } catch (e) {
+    res.status(500).json({ error: e });
   }
 }

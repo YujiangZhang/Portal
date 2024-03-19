@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import dayjs from "dayjs";
 import { Carousel, Divider, Flex, Popover, Row, Space, Tag } from "antd";
 import {
@@ -144,7 +144,9 @@ export function LatestMemos() {
  * 走马灯版
  * @returns
  */
-export function LatestMemosCarousel() {
+export function LatestMemosCarousel(
+  props: React.HTMLAttributes<HTMLDivElement>
+) {
   const [memos, setMemos] = useState<MemoType[]>([]);
   const [height, setHeight] = useState(0);
   const [index, setIndex] = useState(0);
@@ -203,21 +205,28 @@ export function LatestMemosCarousel() {
     <Carousel dotPosition="left" autoplay dots={false}>
       {memos.map((memo) => (
         <div key={memo.id} className="padding-20">
-          <Tag
-            bordered={false}
-            color={
-              {
-                today: "red",
-                future: "cyan",
-                past: "blue",
-              }[datetimeType(memo.datetime, true) as DatetimeReturnStr]
-            }
+          <Space
+            size={5}
+            className="glass"
+            style={{
+              paddingRight: "1rem",
+            }}
           >
-            <span>{dayjs(memo.datetime).format("YY-MM-DD HH:mm")}</span>
-          </Tag>
-
-          <span className="color-60">&ensp; {memo.title} &ensp;</span>
-          <span className="color-40 ellipsis">{memo.content}</span>
+            <Tag
+              bordered={false}
+              color={
+                {
+                  today: "red",
+                  future: "cyan",
+                  past: "blue",
+                }[datetimeType(memo.datetime, true) as DatetimeReturnStr]
+              }
+            >
+              <span>{dayjs(memo.datetime).format("YY-MM-DD HH:mm")}</span>
+            </Tag>
+            <span className="color-60 ">&ensp; {memo.title} &ensp;</span>
+            <span className="color-40  ellipsis ">{memo.content}</span>
+          </Space>
         </div>
       ))}
     </Carousel>
@@ -232,7 +241,7 @@ export default function Memo() {
     // </Space>
     <div
       style={{
-        width: "500px",
+        width: "300px",
         position: "fixed",
         bottom: "2rem",
         left: "1rem",

@@ -223,10 +223,14 @@ function SettingsBackground() {
   }, []);
 
   const update = (data: Partial<BackgroundType>) => {
+    const _formData = form.getFieldsValue();
     const updateData = {
       ...formData,
+      ..._formData,
       ...data,
     };
+
+    console.log("updateData", updateData);
 
     setFormData(updateData);
 
@@ -643,10 +647,7 @@ export default function Settings() {
             title="主题方案设计中~"
             subTitle={
               <>
-                <p>
-                  仅颜色&ensp;
-                  <Tag>主要颜色</Tag>&ensp; 生效
-                </p>
+                <p>仅背景图片和颜色的主要颜色生效</p>
                 <p>
                   非动态生效，还需
                   <Button

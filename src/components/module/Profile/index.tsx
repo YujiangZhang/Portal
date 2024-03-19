@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProfileType } from "@/db/types";
 import { defaultProfile } from "@/db/defaultData";
-import { Space, Avatar, Spin } from "antd";
+import { Space, Avatar, Spin, Flex } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
 const getProfile = async () => {
@@ -49,6 +49,21 @@ function AvatarInstance() {
           {profile.name}
         </Link>
       </span>
+
+      <Flex justify="center" align="center" gap={14}>
+        {profile.socials.map((social, index) => {
+          return (
+            <Link href={social.url} target="_blank" key={index}>
+              <Avatar
+                src={social.icon}
+                size={24}
+                alt={social.name}
+                style={{ cursor: "pointer" }}
+              />
+            </Link>
+          );
+        })}
+      </Flex>
     </Space>
   );
 }
