@@ -306,7 +306,8 @@ function BookMarkUnfold({
       return;
     }
 
-    router.push(bookmark.url);
+    // router.push(bookmark.url);
+    window.open(bookmark.url, "_blank");
   };
 
   return (
@@ -320,12 +321,8 @@ function BookMarkUnfold({
                   e.preventDefault();
                   handleTagClick(bookmark);
                 }}
-                href={bookmark.url}
-                title={
-                  bookmark.describe === "" || !bookmark.describe
-                    ? bookmark.name
-                    : bookmark.describe
-                }
+                href="#"
+                title={bookmark.describe}
                 target="_blank"
               >
                 {bookmark.name}

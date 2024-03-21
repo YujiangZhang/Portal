@@ -113,7 +113,6 @@ const deleteBookMark = async (id: number) => {
  * FIXME: 这里传递了所有改变，修改为
  */
 const updateBookMarkOrder = async (id: number, from: number, to: number) => {
-  console.log("移动开始", id, from, to);
   const res = await request.put(`/bookmark/move`, {
     id,
     from,

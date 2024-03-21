@@ -84,7 +84,5 @@ export function updateMoveBookmark(data: Record<"id" | "from" | "to", number>) {
     updateBookmark(b);
   });
 
-  console.log("needUpdate", needUpdate);
-
   return updateBookmark(bookmark);
 }
