@@ -1,32 +1,39 @@
-/**
- * FoldablePageStackProps
- *
- * - pages: T[] - 页面数据
- * - pageKey: K - 页面的键名
- * - renderPage: (page: T, index: number) => React.ReactNode - 渲染页面的函数
- *
- */
-export interface FoldablePageStackProps<T, K extends keyof T> {
+import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
+import React from "react";
+
+export type FoldableBasePageProps<T, K extends keyof T> = {
+  children: React.ReactNode;
+  onBack?: () => void;
+  title?: React.ReactNode | string;
+  header?: React.ReactNode | boolean;
+  motionProps?: HTMLMotionProps<"div">;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export interface FoldablePagesStackProps<T, K extends keyof T> {
   pages: T[];
   pageKey: K;
-  renderPage: (page: T, index: number) => React.ReactNode;
+  setPages?: React.Dispatch<React.SetStateAction<T[]>>;
+  renderPage?: (page: T, index: number) => React.ReactNode;
+  pageTitle?: string | ((page: T, index: number) => React.ReactNode);
+  pageHeader?: ((page: T, index: number) => React.ReactNode) | boolean;
+
+  parentDomPosition?:
+    | "relative"
+    | "absolute"
+    | "fixed"
+    | "static"
+    | undefined
+    | null;
+
   children?: React.ReactNode;
+
+  pageMotionProps?: HTMLMotionProps<"div">;
+  pageLastMotionAnimation?: HTMLMotionProps<"div">["animate"];
 }
 
-/**
- * FoldablePageExpendProps
- * - ...FoldablePageStackProps  - 页面数据
- * - secondPart: React.ReactNode - 一直显示的次要部分
- * - children: React.ReactNode - 主内容
- */
-export interface FoldablePageExpendProps<T, K extends keyof T>
-  extends FoldablePageStackProps<T, K> {
-  secondPart?: React.ReactNode;
-  children?: React.ReactNode;
-}
-
-/**
- * FoldablePageProps
- */
 export interface FoldablePageProps<T, K extends keyof T>
-  extends FoldablePageExpendProps<T, K> {}
+  extends FoldablePagesStackProps<T, K> {
+  flex?: Record<"main" | "page", number>;
+  autoFlex?: Record<"main" | "page", number>;
+  children?: React.ReactNode;
+}
