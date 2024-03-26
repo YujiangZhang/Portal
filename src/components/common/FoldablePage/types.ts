@@ -1,6 +1,7 @@
 import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
 import React from "react";
 
+// 页面基础组件
 export type FoldableBasePageProps<T, K extends keyof T> = {
   children: React.ReactNode;
   onBack?: () => void;
@@ -9,12 +10,13 @@ export type FoldableBasePageProps<T, K extends keyof T> = {
   motionProps?: HTMLMotionProps<"div">;
 } & React.HTMLAttributes<HTMLDivElement>;
 
+// 页面堆栈
 export interface FoldablePagesStackProps<T, K extends keyof T> {
   pages: T[];
   pageKey: K;
+  renderPage: (page: T, index: number) => React.ReactNode;
   setPages?: React.Dispatch<React.SetStateAction<T[]>>;
-  renderPage?: (page: T, index: number) => React.ReactNode;
-  pageTitle?: string | ((page: T, index: number) => React.ReactNode);
+  pageTitle?: ((page: T, index: number) => React.ReactNode) | string;
   pageHeader?: ((page: T, index: number) => React.ReactNode) | boolean;
 
   parentDomPosition?:
@@ -28,11 +30,13 @@ export interface FoldablePagesStackProps<T, K extends keyof T> {
   children?: React.ReactNode;
 
   pageMotionProps?: HTMLMotionProps<"div">;
-  pageLastMotionAnimation?: HTMLMotionProps<"div">["animate"];
+  pageMotionPropsFunc?: (page: T, index: number) => HTMLMotionProps<"div">;
 }
 
+// 可折叠页面
 export interface FoldablePageProps<T, K extends keyof T>
   extends FoldablePagesStackProps<T, K> {
+  secondaryPage?: React.ReactNode;
   flex?: Record<"main" | "page", number>;
   autoFlex?: Record<"main" | "page", number>;
   children?: React.ReactNode;

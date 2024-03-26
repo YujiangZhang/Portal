@@ -13,6 +13,8 @@ import { setParentDomPosition } from "./utils";
  * 存在 children 且没有 parentDomPosition 时，该组件的根元素为 relative
  *
  * 如果 parentDomPosition 为 null，则不设置任何层级的 position
+ *
+ * 不管如何，都可以通过 pageMotionPropsFunc 来设置页面，覆盖默认的
  */
 export default function FoldablePagesStack<
   T extends Record<string, any>,
@@ -24,11 +26,10 @@ export default function FoldablePagesStack<
   renderPage,
 
   pageTitle,
-
   pageHeader = true,
   parentDomPosition = undefined,
   pageMotionProps,
-  pageLastMotionAnimation,
+  pageMotionPropsFunc,
 
   children,
 }: FoldablePagesStackProps<T, K>) {
@@ -71,11 +72,14 @@ export default function FoldablePagesStack<
                 layout: true,
                 initial: { left: "100%" },
                 exit: { left: "100%" },
+                animate: { left: "0" },
                 ...pageMotionProps,
-                animate:
-                  !!pageLastMotionAnimation && index === pages.length - 1
-                    ? pageLastMotionAnimation
-                    : pageMotionProps?.animate || { left: "0%" },
+                ...(pageMotionPropsFunc &&
+                  pageMotionPropsFunc(pageItem, index)),
+                style: {
+                  ...pageMotionProps?.style,
+                  ...pageMotionPropsFunc?.(pageItem, index)?.style,
+                },
               }}
               onBack={() => {
                 if (!setPages) {

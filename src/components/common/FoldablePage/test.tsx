@@ -72,6 +72,7 @@ export default function Test() {
             <div>{pageItem.name}</div>
           </div>
         )}
+        secondaryPage={<p>secondaryPage</p>}
       >
         <div
           onClick={() => {

@@ -1,8 +1,8 @@
 "use client";
 
 import { FoldableBasePageProps } from "./types";
-import React, { useEffect, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { LeftOutlined } from "@ant-design/icons";
 import style from "./index.module.css";
 
