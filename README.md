@@ -28,8 +28,5 @@ yarn run dev
 
 ```sh
 yarn run build
-# 确保 api 可访问
 yarn run start -p 3000
 ```
-
-> 如果是 export，则需要处理 `/src/pages/api` 与 `/src/db` 到 `/out`
