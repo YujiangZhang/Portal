@@ -2,13 +2,16 @@ import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
 import React from "react";
 
 // 页面基础组件
-export type FoldableBasePageProps<T, K extends keyof T> = {
+export type FoldableBasePageProps<
+  T,
+  K extends keyof T
+> = React.HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
   onBack?: () => void;
   title?: React.ReactNode | string;
   header?: React.ReactNode | boolean;
   motionProps?: HTMLMotionProps<"div">;
-} & React.HTMLAttributes<HTMLDivElement>;
+};
 
 // 页面堆栈
 export interface FoldablePagesStackProps<T, K extends keyof T> {

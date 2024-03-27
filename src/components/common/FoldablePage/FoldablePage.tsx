@@ -3,7 +3,7 @@
 import FoldableBasePage from "./BasePage";
 import FoldablePagesStack from "./PagesStack";
 import { FoldablePageProps } from "./types";
-import style from "./index.module.css";
+import css from "./index.module.css";
 import { useEffect, useMemo, useState } from "react";
 
 /**
@@ -73,9 +73,9 @@ export default function FoldablePage<
     >
       <>
         <FoldableBasePage
-          title={"header"}
+          header={false}
           motionProps={{
-            className: style.pagestack,
+            className: css.pagestack,
             layout: true,
             initial: { left: 0 },
             exit: { left: 0 },
@@ -93,7 +93,7 @@ export default function FoldablePage<
           <FoldableBasePage
             header={false}
             motionProps={{
-              className: style.pagestack,
+              className: css.pagestack,
               layout: true,
               initial: { left: 0 },
               exit: { left: 0 },

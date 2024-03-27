@@ -18,7 +18,12 @@ export type RenderFolderProps<T> = {
   folderItemKey: string;
 
   renderFolderItem: (folderItem: T, index: number) => React.ReactNode;
-  onDragEnd?: (folder: T, key: any, pos: Record<"from" | "to", number>) => void;
+  onDragEnd?: (
+    folder: T,
+    key: any,
+    pos: Record<"from" | "to", number>,
+    arr: T[]
+  ) => void;
   blankRender?: (folder: T) => React.ReactNode;
 
   styles?: {
@@ -109,7 +114,8 @@ export function RenderFolder<T extends FolderType>({
   }, [folder, folderItemKey]);
 
   const handleDragEnd = useCallback(
-    (_event: MouseEvent | TouchEvent | PointerEvent, _info: PanInfo) => {
+    (event: MouseEvent | TouchEvent | PointerEvent, _info: PanInfo) => {
+      event.stopPropagation();
       const info = findMovedElement(
         originItems.current,
         folderItems,
@@ -119,10 +125,15 @@ export function RenderFolder<T extends FolderType>({
       if (!element) return;
       if (info) {
         onDragEnd &&
-          onDragEnd(_.omit(folder, "children") as T, element[folderItemKey], {
-            from: info.from!,
-            to: info.to!,
-          });
+          onDragEnd(
+            _.omit(folder, "children") as T,
+            element[folderItemKey],
+            {
+              from: info.from!,
+              to: info.to!,
+            },
+            folderItems as T[]
+          );
       }
       originItems.current = [...folderItems];
     },
